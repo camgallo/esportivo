@@ -1,9 +1,9 @@
 <meta charset="utf-8">
 <?php
-$host = "localhost";
+$host = "containers-us-west-50.railway.app";
 $user = "root";
-$pass = "";
-$banco = "empresa";
+$pass = "tn9DLLJhi2mXyIfmUdMu";
+$banco = "railway";
 $conexao = new mysqli($host,$user,$pass,$banco);
 
 if (mysqli_connect_errno()) {
