@@ -17,20 +17,25 @@ $setor = $_POST['setor'];
 $cargo = $_POST['cargo'];
 $foto = $_POST['foto'];
 
-$sql = 'INSERT INTO funcionarios (nome, email, setor, cargo, foto) 
-        VALUES (:nome, :email, :setor, :cargo, :foto)';
+//$sql = 'INSERT INTO funcionarios (nome, email, setor, cargo, foto) 
+//        VALUES (:nome, :email, :setor, :cargo, :foto)';
 
-$stmt = $conexao->prepare($sql);
+//$stmt = $conexao->prepare($sql);
 
-$params = array(
-    ':nome' => $nome, 
-    ':email' => $email, 
-    ':setor' => $setor, 
-    ':cargo' => $cargo, 
-    ':foto' => $foto
-);
+//$params = array(
+//    ':nome' => $nome, 
+//    ':email' => $email, 
+//    ':setor' => $setor, 
+//    ':cargo' => $cargo, 
+//    ':foto' => $foto
+//);
 
-$stmt->execute($params);
+//$stmt->execute($params);
+
+$sql = 'INSERT INTO funcionarios (nome, email, setor, cargo, foto) VALUES (?, ?, ?, ?, ?)';
+
+$sth = $dbh->prepare($sql);
+$sth->execute(array($nome,$email,$setor,$cargo,$foto));
 
 echo "<script>
           alert('Funcionário cadastrado com sucesso.');
