@@ -4,7 +4,7 @@ $host = "containers-us-west-50.railway.app";
 $user = "root";
 $pass = "tn9DLLJhi2mXyIfmUdMu";
 $banco = "railway";
-$port = "6663"
+$port = "6663";
 $conexao = new mysqli($host,$user,$pass,$banco,$port);
 
 if (mysqli_connect_errno()) {
