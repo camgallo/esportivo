@@ -18,8 +18,7 @@ $cargo = $_POST['cargo'];
 $foto = $_POST['foto'];
 
 $sql = "INSERT INTO funcionarios (nome, email, setor, cargo, foto) 
-        VALUES (:nome, :email, :setor, :cargo, :foto)
-";
+        VALUES (:nome, :email, :setor, :cargo, :foto)";
 
 $stmt = $conexao->prepare($sql);
 
@@ -36,7 +35,7 @@ $stmt->execute($params);
 echo "<script>
           alert('Funcionário cadastrado com sucesso.');
       </script>
-      <meta http-equiv='refresh' content='0, url=funcionarios.php'>
+      <meta http-equiv='refresh' content='0, url=index.php'>
 ";
 ?>
 </body>
