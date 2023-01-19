@@ -17,8 +17,8 @@ $setor = $_POST['setor'];
 $cargo = $_POST['cargo'];
 $foto = $_POST['foto'];
 
-$sql = "INSERT INTO funcionarios (nome, email, setor, cargo, foto) 
-        VALUES (:nome, :email, :setor, :cargo, :foto)";
+$sql = 'INSERT INTO funcionarios (nome, email, setor, cargo, foto) 
+        VALUES (:nome, :email, :setor, :cargo, :foto)';
 
 $stmt = $conexao->prepare($sql);
 
