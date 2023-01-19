@@ -34,7 +34,7 @@ $foto = $_POST['foto'];
 
 $sql = 'INSERT INTO funcionarios (nome, email, setor, cargo, foto) VALUES (?, ?, ?, ?, ?)';
 
-$sth = $dbh->prepare($sql);
+$sth = $conexao->prepare($sql);
 $sth->execute(array($nome,$email,$setor,$cargo,$foto));
 
 echo "<script>
